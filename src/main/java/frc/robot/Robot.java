@@ -46,6 +46,7 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     SmartDashboard.putBoolean("Developer Mode", false);
+
     mDrivebase = Drivebase.getInstance();
     mGamepad = Gamepad.getInstance();
     mDrivePanel = DrivePanel.getInstance();
