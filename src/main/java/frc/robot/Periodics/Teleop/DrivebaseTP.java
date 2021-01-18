@@ -7,7 +7,6 @@
 
 package frc.robot.Periodics.Teleop;
 
-import frc.robot.Subsystems.DrivePanel;
 import frc.robot.Subsystems.Drivebase;
 import frc.robot.Subsystems.Gamepad;
 
