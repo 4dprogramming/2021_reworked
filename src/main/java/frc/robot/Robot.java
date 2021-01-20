@@ -78,6 +78,8 @@ public class Robot extends TimedRobot {
     developerMode = SmartDashboard.getBoolean("Developer Mode", false);
     SmartDashboard.putNumber("Shooter Encoder", mShooter.shooterEnc.getRaw());
     SmartDashboard.putNumber("Accelerator Encoder", mShooter.accEnc.getRaw());
+    SmartDashboard.putData("Gyro", mDrivebase.gyro);
+    SmartDashboard.putData("Drivebase", mDrivebase.differentialDrive);
   }
 
   /**
