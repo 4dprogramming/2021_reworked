@@ -46,6 +46,7 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
     SmartDashboard.putBoolean("Developer Mode", false);
+
     mDrivebase = Drivebase.getInstance();
     mGamepad = Gamepad.getInstance();
     mDrivePanel = DrivePanel.getInstance();
@@ -77,6 +78,8 @@ public class Robot extends TimedRobot {
     developerMode = SmartDashboard.getBoolean("Developer Mode", false);
     SmartDashboard.putNumber("Shooter Encoder", mShooter.shooterEnc.getRaw());
     SmartDashboard.putNumber("Accelerator Encoder", mShooter.accEnc.getRaw());
+    SmartDashboard.putData("Gyro", mDrivebase.gyro);
+    SmartDashboard.putData("Drivebase", mDrivebase.differentialDrive);
   }
 
   /**

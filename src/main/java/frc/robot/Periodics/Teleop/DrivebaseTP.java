@@ -7,7 +7,6 @@
 
 package frc.robot.Periodics.Teleop;
 
-import frc.robot.Subsystems.DrivePanel;
 import frc.robot.Subsystems.Drivebase;
 import frc.robot.Subsystems.Gamepad;
 
@@ -22,7 +21,6 @@ public class DrivebaseTP{
     }
     
     public Drivebase mDrivebase;
-    public DrivePanel mDrivePanel;
     public Gamepad mGamepad;
     
     public double sensitivity = 0.75;
@@ -34,10 +32,6 @@ public class DrivebaseTP{
 
     public void drivebaseTP(){
         mDrivebase.robotDrive((mGamepad.getForward()-mGamepad.getReverse()), mGamepad.getSteering()*sensitivity);
-
-        if(mGamepad.setupRobot()){
-            mDrivebase.setupRobot();
-        }
     }
 }
 

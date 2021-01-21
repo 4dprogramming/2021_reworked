@@ -71,16 +71,6 @@ public class Drivebase {
         gyro.reset();
     }
 
-    public void setupRobot(){
-        differentialDrive.curvatureDrive(0, mPID.turnPID(Constants.kShootingAngle, getGyroAngle()), true);
-        
-    }
-
-    public void autoTurn(double wantedAngle){
-        if(Constants.tolerance(getGyroAngle(), wantedAngle, 0.5));
-        else
-        differentialDrive.curvatureDrive(0,mPID.turnPID(wantedAngle, getGyroAngle()),false);
-    }
 
     //Robot Driving
     public void robotDrive(double speed, double rotation_speed){
